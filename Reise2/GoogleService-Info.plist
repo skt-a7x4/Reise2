@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>622382856498-fk018rjqdb936ctcf6ggi1juc4711v4c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.622382856498-fk018rjqdb936ctcf6ggi1juc4711v4c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB0yk934nQgTp0w1OglKSvM18x1YO16KjU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>622382856498</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Sakoa7o73.Reise2</string>
+	<key>PROJECT_ID</key>
+	<string>reise-23b01</string>
+	<key>STORAGE_BUCKET</key>
+	<string>reise-23b01.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:622382856498:ios:7a3694fb937cc2e9767f2b</string>
+</dict>
+</plist>

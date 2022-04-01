@@ -1,0 +1,875 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F1EE71227DA236E0020A73E /* ReiseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1EE71127DA236E0020A73E /* ReiseModel.swift */; };
+		4F3454A427D7B334007FCC6C /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3454A327D7B334007FCC6C /* ProfileModel.swift */; };
+		4F3454A627D8F8C9007FCC6C /* UserDefaltsEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3454A527D8F8C8007FCC6C /* UserDefaltsEX.swift */; };
+		4F3454A827D9EBB4007FCC6C /* ReiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3454A727D9EBB4007FCC6C /* ReiseViewController.swift */; };
+		4F3454AA27D9EBFB007FCC6C /* LoadDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3454A927D9EBFB007FCC6C /* LoadDBModel.swift */; };
+		4F40151827D515230031628B /* ToukouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40151727D515230031628B /* ToukouViewController.swift */; };
+		4F40151B27D515580031628B /* KensakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F40151A27D515580031628B /* KensakuViewController.swift */; };
+		4F59828927D235C2005353A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59828827D235C2005353A0 /* AppDelegate.swift */; };
+		4F59828B27D235C2005353A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59828A27D235C2005353A0 /* SceneDelegate.swift */; };
+		4F59828D27D235C2005353A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59828C27D235C2005353A0 /* ViewController.swift */; };
+		4F59829027D235C2005353A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F59828E27D235C2005353A0 /* Main.storyboard */; };
+		4F59829227D235C3005353A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F59829127D235C3005353A0 /* Assets.xcassets */; };
+		4F59829527D235C3005353A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F59829327D235C3005353A0 /* LaunchScreen.storyboard */; };
+		4F5982A027D235C3005353A0 /* Reise2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59829F27D235C3005353A0 /* Reise2Tests.swift */; };
+		4F5982AA27D235C3005353A0 /* Reise2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982A927D235C3005353A0 /* Reise2UITests.swift */; };
+		4F5982AC27D235C3005353A0 /* Reise2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982AB27D235C3005353A0 /* Reise2UITestsLaunchTests.swift */; };
+		4F5982B927D236A8005353A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F5982B827D236A8005353A0 /* GoogleService-Info.plist */; };
+		4F5982BF27D23778005353A0 /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5982BA27D23774005353A0 /* 1.json */; };
+		4F5982C027D23778005353A0 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5982BB27D23775005353A0 /* 2.json */; };
+		4F5982C127D23778005353A0 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5982BC27D23776005353A0 /* 4.json */; };
+		4F5982C227D23778005353A0 /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5982BD27D23777005353A0 /* 3.json */; };
+		4F5982C327D23778005353A0 /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5982BE27D23777005353A0 /* 5.json */; };
+		4F5982C527D237A3005353A0 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982C427D237A3005353A0 /* Util.swift */; };
+		4F5982CA27D237F2005353A0 /* SendDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982C927D237F2005353A0 /* SendDBModel.swift */; };
+		4F5982CC27D237FA005353A0 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982CB27D237FA005353A0 /* UserDataModel.swift */; };
+		4F5982CE27D237FE005353A0 /* KeyChainConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982CD27D237FE005353A0 /* KeyChainConfig.swift */; };
+		4F5982D027D23806005353A0 /* Maneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982CF27D23806005353A0 /* Maneger.swift */; };
+		4F5982D227D238F0005353A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982D127D238F0005353A0 /* ProfileViewController.swift */; };
+		4F5982D427D238FB005353A0 /* SentakuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5982D327D238FB005353A0 /* SentakuViewController.swift */; };
+		583C8A3FB2FFB5F5A366A2AB /* Pods_Reise2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E185522EB59838FCFAAD03F6 /* Pods_Reise2Tests.framework */; };
+		6D66062520BB4447E7D62349 /* Pods_Reise2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F74D01C7FFDE0AFCC65A1A3 /* Pods_Reise2.framework */; };
+		8CBDB723CA0369CB7F334730 /* Pods_Reise2_Reise2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BF31082A6A611D88F97A57 /* Pods_Reise2_Reise2UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F59829C27D235C3005353A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F59827D27D235C2005353A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F59828427D235C2005353A0;
+			remoteInfo = Reise2;
+		};
+		4F5982A627D235C3005353A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F59827D27D235C2005353A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F59828427D235C2005353A0;
+			remoteInfo = Reise2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30BF31082A6A611D88F97A57 /* Pods_Reise2_Reise2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reise2_Reise2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1EE71127DA236E0020A73E /* ReiseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReiseModel.swift; sourceTree = "<group>"; };
+		4F3454A327D7B334007FCC6C /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		4F3454A527D8F8C8007FCC6C /* UserDefaltsEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaltsEX.swift; sourceTree = "<group>"; };
+		4F3454A727D9EBB4007FCC6C /* ReiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReiseViewController.swift; sourceTree = "<group>"; };
+		4F3454A927D9EBFB007FCC6C /* LoadDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDBModel.swift; sourceTree = "<group>"; };
+		4F40151727D515230031628B /* ToukouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToukouViewController.swift; sourceTree = "<group>"; };
+		4F40151A27D515580031628B /* KensakuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KensakuViewController.swift; sourceTree = "<group>"; };
+		4F59828527D235C2005353A0 /* Reise2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reise2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F59828827D235C2005353A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F59828A27D235C2005353A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F59828C27D235C2005353A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F59828F27D235C2005353A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F59829127D235C3005353A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F59829427D235C3005353A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F59829627D235C3005353A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F59829B27D235C3005353A0 /* Reise2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reise2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F59829F27D235C3005353A0 /* Reise2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reise2Tests.swift; sourceTree = "<group>"; };
+		4F5982A527D235C3005353A0 /* Reise2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reise2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5982A927D235C3005353A0 /* Reise2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reise2UITests.swift; sourceTree = "<group>"; };
+		4F5982AB27D235C3005353A0 /* Reise2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reise2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F5982B827D236A8005353A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F5982BA27D23774005353A0 /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
+		4F5982BB27D23775005353A0 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2.json; sourceTree = "<group>"; };
+		4F5982BC27D23776005353A0 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 4.json; sourceTree = "<group>"; };
+		4F5982BD27D23777005353A0 /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3.json; sourceTree = "<group>"; };
+		4F5982BE27D23777005353A0 /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 5.json; sourceTree = "<group>"; };
+		4F5982C427D237A3005353A0 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4F5982C927D237F2005353A0 /* SendDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDBModel.swift; sourceTree = "<group>"; };
+		4F5982CB27D237FA005353A0 /* UserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		4F5982CD27D237FE005353A0 /* KeyChainConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainConfig.swift; sourceTree = "<group>"; };
+		4F5982CF27D23806005353A0 /* Maneger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maneger.swift; sourceTree = "<group>"; };
+		4F5982D127D238F0005353A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4F5982D327D238FB005353A0 /* SentakuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentakuViewController.swift; sourceTree = "<group>"; };
+		4F74D01C7FFDE0AFCC65A1A3 /* Pods_Reise2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reise2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		877CF965D55AE5966EED71BD /* Pods-Reise2-Reise2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reise2-Reise2UITests.release.xcconfig"; path = "Target Support Files/Pods-Reise2-Reise2UITests/Pods-Reise2-Reise2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		92D706E9A6386F2286A993A8 /* Pods-Reise2-Reise2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reise2-Reise2UITests.debug.xcconfig"; path = "Target Support Files/Pods-Reise2-Reise2UITests/Pods-Reise2-Reise2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9DA5BECC9399CF31EAA06390 /* Pods-Reise2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reise2.release.xcconfig"; path = "Target Support Files/Pods-Reise2/Pods-Reise2.release.xcconfig"; sourceTree = "<group>"; };
+		AAC0497A8A380356D19C693D /* Pods-Reise2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reise2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Reise2Tests/Pods-Reise2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADBAAF5FBD634A3B6DA160F4 /* Pods-Reise2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reise2Tests.release.xcconfig"; path = "Target Support Files/Pods-Reise2Tests/Pods-Reise2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DE8DC7A83A4659AE983AC104 /* Pods-Reise2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reise2.debug.xcconfig"; path = "Target Support Files/Pods-Reise2/Pods-Reise2.debug.xcconfig"; sourceTree = "<group>"; };
+		E185522EB59838FCFAAD03F6 /* Pods_Reise2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reise2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F59828227D235C2005353A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D66062520BB4447E7D62349 /* Pods_Reise2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F59829827D235C3005353A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583C8A3FB2FFB5F5A366A2AB /* Pods_Reise2Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F5982A227D235C3005353A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CBDB723CA0369CB7F334730 /* Pods_Reise2_Reise2UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1855A39266CB9587D8764C24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F74D01C7FFDE0AFCC65A1A3 /* Pods_Reise2.framework */,
+				30BF31082A6A611D88F97A57 /* Pods_Reise2_Reise2UITests.framework */,
+				E185522EB59838FCFAAD03F6 /* Pods_Reise2Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AD6D2D77EB5D8D37A54F299 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DC7A83A4659AE983AC104 /* Pods-Reise2.debug.xcconfig */,
+				9DA5BECC9399CF31EAA06390 /* Pods-Reise2.release.xcconfig */,
+				92D706E9A6386F2286A993A8 /* Pods-Reise2-Reise2UITests.debug.xcconfig */,
+				877CF965D55AE5966EED71BD /* Pods-Reise2-Reise2UITests.release.xcconfig */,
+				AAC0497A8A380356D19C693D /* Pods-Reise2Tests.debug.xcconfig */,
+				ADBAAF5FBD634A3B6DA160F4 /* Pods-Reise2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F59827C27D235C2005353A0 = {
+			isa = PBXGroup;
+			children = (
+				4F59828727D235C2005353A0 /* Reise2 */,
+				4F5982B827D236A8005353A0 /* GoogleService-Info.plist */,
+				4F5982BA27D23774005353A0 /* 1.json */,
+				4F5982BB27D23775005353A0 /* 2.json */,
+				4F5982BD27D23777005353A0 /* 3.json */,
+				4F5982BC27D23776005353A0 /* 4.json */,
+				4F5982BE27D23777005353A0 /* 5.json */,
+				4F59829E27D235C3005353A0 /* Reise2Tests */,
+				4F5982A827D235C3005353A0 /* Reise2UITests */,
+				4F59828627D235C2005353A0 /* Products */,
+				2AD6D2D77EB5D8D37A54F299 /* Pods */,
+				1855A39266CB9587D8764C24 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4F59828627D235C2005353A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F59828527D235C2005353A0 /* Reise2.app */,
+				4F59829B27D235C3005353A0 /* Reise2Tests.xctest */,
+				4F5982A527D235C3005353A0 /* Reise2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F59828727D235C2005353A0 /* Reise2 */ = {
+			isa = PBXGroup;
+			children = (
+				4F59828827D235C2005353A0 /* AppDelegate.swift */,
+				4F59828A27D235C2005353A0 /* SceneDelegate.swift */,
+				4F5982C627D237AE005353A0 /* Model */,
+				4F5982C727D237B9005353A0 /* View */,
+				4F5982C827D237DA005353A0 /* Controller */,
+				4F59829127D235C3005353A0 /* Assets.xcassets */,
+				4F59829627D235C3005353A0 /* Info.plist */,
+			);
+			path = Reise2;
+			sourceTree = "<group>";
+		};
+		4F59829E27D235C3005353A0 /* Reise2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4F59829F27D235C3005353A0 /* Reise2Tests.swift */,
+			);
+			path = Reise2Tests;
+			sourceTree = "<group>";
+		};
+		4F5982A827D235C3005353A0 /* Reise2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F5982A927D235C3005353A0 /* Reise2UITests.swift */,
+				4F5982AB27D235C3005353A0 /* Reise2UITestsLaunchTests.swift */,
+			);
+			path = Reise2UITests;
+			sourceTree = "<group>";
+		};
+		4F5982C627D237AE005353A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F5982C427D237A3005353A0 /* Util.swift */,
+				4F5982C927D237F2005353A0 /* SendDBModel.swift */,
+				4F5982CB27D237FA005353A0 /* UserDataModel.swift */,
+				4F5982CD27D237FE005353A0 /* KeyChainConfig.swift */,
+				4F5982CF27D23806005353A0 /* Maneger.swift */,
+				4F3454A327D7B334007FCC6C /* ProfileModel.swift */,
+				4F3454A527D8F8C8007FCC6C /* UserDefaltsEX.swift */,
+				4F3454A927D9EBFB007FCC6C /* LoadDBModel.swift */,
+				4F1EE71127DA236E0020A73E /* ReiseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F5982C727D237B9005353A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F59828E27D235C2005353A0 /* Main.storyboard */,
+				4F3C0FC827EA218700336198 /* LaunchScreen.storyboard */,
+				4F59829327D235C3005353A0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F5982C827D237DA005353A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F59828C27D235C2005353A0 /* ViewController.swift */,
+				4F5982D127D238F0005353A0 /* ProfileViewController.swift */,
+				4F5982D327D238FB005353A0 /* SentakuViewController.swift */,
+				4F40151727D515230031628B /* ToukouViewController.swift */,
+				4F40151A27D515580031628B /* KensakuViewController.swift */,
+				4F3454A727D9EBB4007FCC6C /* ReiseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F59828427D235C2005353A0 /* Reise2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5982AF27D235C3005353A0 /* Build configuration list for PBXNativeTarget "Reise2" */;
+			buildPhases = (
+				F921A8D332A5B9FAD75DB0FC /* [CP] Check Pods Manifest.lock */,
+				4F59828127D235C2005353A0 /* Sources */,
+				4F59828227D235C2005353A0 /* Frameworks */,
+				4F59828327D235C2005353A0 /* Resources */,
+				A972BF1826B83A9DDA4518F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reise2;
+			productName = Reise2;
+			productReference = 4F59828527D235C2005353A0 /* Reise2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F59829A27D235C3005353A0 /* Reise2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5982B227D235C3005353A0 /* Build configuration list for PBXNativeTarget "Reise2Tests" */;
+			buildPhases = (
+				C6472DCE7F766359B673EB59 /* [CP] Check Pods Manifest.lock */,
+				4F59829727D235C3005353A0 /* Sources */,
+				4F59829827D235C3005353A0 /* Frameworks */,
+				4F59829927D235C3005353A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F59829D27D235C3005353A0 /* PBXTargetDependency */,
+			);
+			name = Reise2Tests;
+			productName = Reise2Tests;
+			productReference = 4F59829B27D235C3005353A0 /* Reise2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F5982A427D235C3005353A0 /* Reise2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5982B527D235C3005353A0 /* Build configuration list for PBXNativeTarget "Reise2UITests" */;
+			buildPhases = (
+				FBC0A68D543B4530891D32B0 /* [CP] Check Pods Manifest.lock */,
+				4F5982A127D235C3005353A0 /* Sources */,
+				4F5982A227D235C3005353A0 /* Frameworks */,
+				4F5982A327D235C3005353A0 /* Resources */,
+				FA53C7E12B3A9F61E4B459D9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F5982A727D235C3005353A0 /* PBXTargetDependency */,
+			);
+			name = Reise2UITests;
+			productName = Reise2UITests;
+			productReference = 4F5982A527D235C3005353A0 /* Reise2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F59827D27D235C2005353A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					4F59828427D235C2005353A0 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					4F59829A27D235C3005353A0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4F59828427D235C2005353A0;
+					};
+					4F5982A427D235C3005353A0 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4F59828427D235C2005353A0;
+					};
+				};
+			};
+			buildConfigurationList = 4F59828027D235C2005353A0 /* Build configuration list for PBXProject "Reise2" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F59827C27D235C2005353A0;
+			productRefGroup = 4F59828627D235C2005353A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F59828427D235C2005353A0 /* Reise2 */,
+				4F59829A27D235C3005353A0 /* Reise2Tests */,
+				4F5982A427D235C3005353A0 /* Reise2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F59828327D235C2005353A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5982BF27D23778005353A0 /* 1.json in Resources */,
+				4F5982C227D23778005353A0 /* 3.json in Resources */,
+				4F59829527D235C3005353A0 /* LaunchScreen.storyboard in Resources */,
+				4F5982C127D23778005353A0 /* 4.json in Resources */,
+				4F5982C027D23778005353A0 /* 2.json in Resources */,
+				4F5982C327D23778005353A0 /* 5.json in Resources */,
+				4F5982B927D236A8005353A0 /* GoogleService-Info.plist in Resources */,
+				4F59829227D235C3005353A0 /* Assets.xcassets in Resources */,
+				4F59829027D235C2005353A0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F59829927D235C3005353A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F5982A327D235C3005353A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A972BF1826B83A9DDA4518F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reise2/Pods-Reise2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reise2/Pods-Reise2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reise2/Pods-Reise2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6472DCE7F766359B673EB59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reise2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F921A8D332A5B9FAD75DB0FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reise2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA53C7E12B3A9F61E4B459D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reise2-Reise2UITests/Pods-Reise2-Reise2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reise2-Reise2UITests/Pods-Reise2-Reise2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reise2-Reise2UITests/Pods-Reise2-Reise2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC0A68D543B4530891D32B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reise2-Reise2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F59828127D235C2005353A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3454A427D7B334007FCC6C /* ProfileModel.swift in Sources */,
+				4F5982D427D238FB005353A0 /* SentakuViewController.swift in Sources */,
+				4F1EE71227DA236E0020A73E /* ReiseModel.swift in Sources */,
+				4F5982CC27D237FA005353A0 /* UserDataModel.swift in Sources */,
+				4F3454AA27D9EBFB007FCC6C /* LoadDBModel.swift in Sources */,
+				4F3454A827D9EBB4007FCC6C /* ReiseViewController.swift in Sources */,
+				4F5982CE27D237FE005353A0 /* KeyChainConfig.swift in Sources */,
+				4F40151827D515230031628B /* ToukouViewController.swift in Sources */,
+				4F5982CA27D237F2005353A0 /* SendDBModel.swift in Sources */,
+				4F59828D27D235C2005353A0 /* ViewController.swift in Sources */,
+				4F59828927D235C2005353A0 /* AppDelegate.swift in Sources */,
+				4F59828B27D235C2005353A0 /* SceneDelegate.swift in Sources */,
+				4F5982D227D238F0005353A0 /* ProfileViewController.swift in Sources */,
+				4F5982C527D237A3005353A0 /* Util.swift in Sources */,
+				4F3454A627D8F8C9007FCC6C /* UserDefaltsEX.swift in Sources */,
+				4F5982D027D23806005353A0 /* Maneger.swift in Sources */,
+				4F40151B27D515580031628B /* KensakuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F59829727D235C3005353A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5982A027D235C3005353A0 /* Reise2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F5982A127D235C3005353A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F5982AC27D235C3005353A0 /* Reise2UITestsLaunchTests.swift in Sources */,
+				4F5982AA27D235C3005353A0 /* Reise2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F59829D27D235C3005353A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F59828427D235C2005353A0 /* Reise2 */;
+			targetProxy = 4F59829C27D235C3005353A0 /* PBXContainerItemProxy */;
+		};
+		4F5982A727D235C3005353A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F59828427D235C2005353A0 /* Reise2 */;
+			targetProxy = 4F5982A627D235C3005353A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F3C0FC827EA218700336198 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4F59828E27D235C2005353A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F59828F27D235C2005353A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F59829327D235C3005353A0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F59829427D235C3005353A0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F5982AD27D235C3005353A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F5982AE27D235C3005353A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F5982B027D235C3005353A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE8DC7A83A4659AE983AC104 /* Pods-Reise2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG6697FX3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reise2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sakoa7o73.Reise2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F5982B127D235C3005353A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA5BECC9399CF31EAA06390 /* Pods-Reise2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG6697FX3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reise2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sakoa7o73.Reise2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F5982B327D235C3005353A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC0497A8A380356D19C693D /* Pods-Reise2Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG6697FX3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sakoa7o73.Reise2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reise2.app/Reise2";
+			};
+			name = Debug;
+		};
+		4F5982B427D235C3005353A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADBAAF5FBD634A3B6DA160F4 /* Pods-Reise2Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG6697FX3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sakoa7o73.Reise2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reise2.app/Reise2";
+			};
+			name = Release;
+		};
+		4F5982B627D235C3005353A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D706E9A6386F2286A993A8 /* Pods-Reise2-Reise2UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG6697FX3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sakoa7o73.Reise2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Reise2;
+			};
+			name = Debug;
+		};
+		4F5982B727D235C3005353A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 877CF965D55AE5966EED71BD /* Pods-Reise2-Reise2UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MG6697FX3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sakoa7o73.Reise2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Reise2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F59828027D235C2005353A0 /* Build configuration list for PBXProject "Reise2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5982AD27D235C3005353A0 /* Debug */,
+				4F5982AE27D235C3005353A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F5982AF27D235C3005353A0 /* Build configuration list for PBXNativeTarget "Reise2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5982B027D235C3005353A0 /* Debug */,
+				4F5982B127D235C3005353A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F5982B227D235C3005353A0 /* Build configuration list for PBXNativeTarget "Reise2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5982B327D235C3005353A0 /* Debug */,
+				4F5982B427D235C3005353A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F5982B527D235C3005353A0 /* Build configuration list for PBXNativeTarget "Reise2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5982B627D235C3005353A0 /* Debug */,
+				4F5982B727D235C3005353A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F59827D27D235C2005353A0 /* Project object */;
+}
