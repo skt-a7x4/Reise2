@@ -1,13 +1,6 @@
-//
-//  KensakuViewController.swift
-//  Reise2
-//
-//  Created by 酒匂竜也 on 2022/03/07.
-//
-
 import UIKit
 import FirebaseFirestore
-
+import Photos
 
 
 class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UINavigationControllerDelegate {
@@ -21,7 +14,7 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
     var prefecturepicker = UIPickerView()
     var prefectureString = [String]()
     var Posts = [ReisedPostModel]()
-    
+    var sendDBModdel = SendDBModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +26,7 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         prefecturepicker.tag = 1
         doneButton.isEnabled = true
         
-        fetchpostDataby(Todofuken: "沖縄県")
+//        fetchpostDataby(Todofuken: "沖縄県")
         
     }
     
@@ -90,17 +83,18 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         }
     }
     
-    func fetchpostDataby(Todofuken:String) {
+    func fetchpostDataby(Todofuken:String,complision:@escaping([ReisedPostModel]?)->()) {
         
         self.db.collection("Posts").whereField("ReisePrefecture", isEqualTo: Todofuken).getDocuments { snapShots, error in
             if let error = error {
                 
                 print(error)
+                complision(nil)
                 
             }
             
             guard let documents = snapShots?.documents else{
-                
+                complision(nil)
                 return
                 
             }
@@ -109,7 +103,9 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
                 
                 self.Posts.append(ReisedPostModel(dic: snapShot.data()))
                 
+                
             }
+            complision(self.Posts)
         }
         
     }
@@ -119,16 +115,22 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
     @IBAction func done(_ sender: Any) {
         
 //        非同期処理
-        DispatchQueue.main.async { [self] in
-            self.Posts = 
+        fetchpostDataby(Todofuken:prefecture.text! ) { Posts in
+            if let Posts = Posts{
+                
+                DispatchQueue.main.async {
+                    let storyBoard = UIStoryboard(name:"Main" , bundle: nil)
+                    let nextVC = storyBoard.instantiateViewController(withIdentifier: "ReiseViewController") as! ReiseViewController
+                    nextVC.Posts = Posts
+                    self.present(nextVC, animated: true, completion: nil)
+                }
+                
+            }else{
+                
+                print("通信に失敗しました")
+                
+            }
         }
-        
-        
-        let storyBoard = UIStoryboard(name:"Main" , bundle: nil)
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: "ReiseViewController") as! ReiseViewController
-        nextVC.Posts = Posts
-        self.present(nextVC, animated: true, completion: nil)
-        
         
     }
     

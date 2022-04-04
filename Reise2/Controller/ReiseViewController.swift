@@ -10,9 +10,12 @@ import SDWebImage
 import Cosmos
 import Firebase
 import FirebaseAuth
+import Nuke
 
 
-class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GetReise{
+ 
+    
 //,GetReise {
 
     
@@ -68,6 +71,12 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 665
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -79,17 +88,53 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath)
         
         
-        let profileImageView = cell.contentView.viewWithTag(1) as! UIImageView
+       
+        
+       let profileImageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let profileImage = self.Posts[indexPath.row].sender[0]
+        if let url = URL(string: profileImage) {
+
+            Nuke.loadImage(with: url, into: profileImageView)
+        }
+
+
         let userName = cell.contentView.viewWithTag(2) as! UILabel
+        userName.text = self.Posts[indexPath.row].sender[1]
+
         let ReiseImageView = cell.viewWithTag(3) as! UIImageView
+
+        let ReiseImage = self.Posts[indexPath.row].ReiseImageData
+        if let url = URL(string: ReiseImage) {
+
+            Nuke.loadImage(with: url, into: ReiseImageView)
+
+
+        }
         let Reise = cell.contentView.viewWithTag(4) as! UILabel
+        Reise.text = self.Posts[indexPath.row].ReiseName
+
         let prefecture = cell.contentView.viewWithTag(5) as! UILabel
+        prefecture.text = self.Posts[indexPath.row].prefecture
+
         let price = cell.contentView.viewWithTag(6) as! UILabel
+        price.text = self.Posts[indexPath.row].price
+
+
         let review = cell.contentView.viewWithTag(7) as! UILabel
+        review.text = self.Posts[indexPath.row].Review
+
         let rate = cell.contentView.viewWithTag(8) as! CosmosView
 
         return cell
     }
+    
+    func getReise(dataArray: [ReiseModel]) {
+        reiseModelArray = []
+        reiseModelArray = dataArray
+        ReiseTableView.reloadData()
+        
+    }
+    
     
     
     
