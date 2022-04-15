@@ -18,6 +18,9 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+      
+        
         // Do any additional setup after loading the view.
         prefecture.inputView = prefecturepicker
         prefecturepicker.delegate = self
@@ -26,11 +29,16 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         prefecturepicker.tag = 1
         doneButton.isEnabled = true
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
 //        fetchpostDataby(Todofuken: "沖縄県")
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -122,7 +130,8 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
                     let storyBoard = UIStoryboard(name:"Main" , bundle: nil)
                     let nextVC = storyBoard.instantiateViewController(withIdentifier: "ReiseViewController") as! ReiseViewController
                     nextVC.Posts = Posts
-                    self.present(nextVC, animated: true, completion: nil)
+                
+    self.present(nextVC, animated: true, completion: nil)
                 }
                 
             }else{
@@ -133,7 +142,6 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         }
         
     }
-    
     /*
     // MARK: - Navigation
 

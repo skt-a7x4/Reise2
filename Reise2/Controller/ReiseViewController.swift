@@ -13,7 +13,7 @@ import FirebaseAuth
 import Nuke
 
 
-class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GetReise{
+class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GetReise,UINavigationControllerDelegate{
  
     
 //,GetReise {
@@ -34,13 +34,19 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         ReiseTableView.dataSource = self
         ReiseTableView.delegate = self
         
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func ReiseFirebase() {
         
         let Ref = Firestore.firestore().collection("Users").document("Reise")
-        
+        ReiseTableView.reloadData()
         Ref.getDocument() { (snapShot,error) in
             if let error = error {
                 
@@ -54,10 +60,12 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-       
+        
     }
     
     func getreise() {
+        
+        
         let Ref = Firestore.firestore().collection("Users").document("Reise")
         Ref.getDocument { (querySnapShot, error) in
             if let error = error{
@@ -72,7 +80,7 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 665
+        return 845
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -80,7 +88,7 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return Posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -124,8 +132,12 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         review.text = self.Posts[indexPath.row].Review
 
         let rate = cell.contentView.viewWithTag(8) as! CosmosView
-
+        
+        
+        
         return cell
+        
+        
     }
     
     func getReise(dataArray: [ReiseModel]) {
@@ -138,7 +150,19 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     
-//    func getReise(dataArray: [ReiseModel]) {
+    @IBAction func backButton(_ sender: Any) {
+        
+        self.dismiss(animated: true,completion: nil)
+        
+        self.ReiseTableView.reloadData()
+        Posts = []
+        
+    }
+    
+    
+    
+    
+    //    func getReise(dataArray: [ReiseModel]) {
 //    }
     
     /*

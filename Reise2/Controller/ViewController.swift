@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import SnapKit
 
 class ViewController: UIViewController,UIScrollViewDelegate {
 
@@ -14,11 +15,15 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var ESCButton: UIButton!
     
+    
     var  AnimationArray = ["1","2","3","4","5"]
     var AnimationStringArray = ["あなたの投稿で観光地や地元を盛り上げよう","楽しい、綺麗な夜景や背景をみんなで共有","いいなぁと思った場所にはどんどん行ってみよう","あなたの投稿が輪を広げる","さぁ登録して始めよう！"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ESCButton.frame = CGRect(x:280, y: 100, width: 100, height: 30)
+        
         // Do any additional setup after loading the view.
         ScrollView.isPagingEnabled = true
         SetScroll()
@@ -33,19 +38,18 @@ class ViewController: UIViewController,UIScrollViewDelegate {
             animationView.loopMode = .loop
             animationView.play()
             ScrollView.addSubview(animationView)
-            
+           
         }
-        
     }
     
-    
+   
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.navigationController?.isNavigationBarHidden = true
-       let ESCBT = ESCButton
-        
+        self.navigationController?.isNavigationBarHidden = false
+      
+       
         view.addSubview(ESCButton)
         
 
@@ -57,8 +61,13 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         ScrollView.delegate = self
         
+        
         ScrollView.contentSize = CGSize(width: view.frame.width * 5, height: ScrollView.frame.size.height)
         
+        ScrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()//Scroll画面全画面固定
+            
+        }
        
         
         for i in 0...4 {

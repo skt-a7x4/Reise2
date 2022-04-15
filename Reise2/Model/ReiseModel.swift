@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct ReiseModel {
     
 //    var profileModel:ProfileModel?
@@ -32,7 +33,7 @@ struct ReisedPostModel {
     var prefecture:String
     var price:String
     var Review:String
-    
+   
     init(dic:[String:Any]) {
         
         self.ReiseName = dic["ReiseName"] as? String ?? ""
@@ -42,9 +43,9 @@ struct ReisedPostModel {
         self.prefecture = dic["ReisePrefecture"] as? String ?? ""
         self.price = dic["price"] as? String ?? ""
         self.Review = dic["review"] as? String ?? ""
-        
+       
     }
     
-    
+ 
     
 }

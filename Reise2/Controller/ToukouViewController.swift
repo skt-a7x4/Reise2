@@ -10,7 +10,7 @@ import Cosmos
 import Firebase
 import Photos
 
-class ToukouViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,ReiseSendDone{
+class ToukouViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextViewDelegate,ReiseSendDone{
     
     
    
@@ -54,13 +54,29 @@ class ToukouViewController: UIViewController,UITextFieldDelegate,UIPickerViewDel
         TodoufukenPicker.tag = 1
         MoneyPicker.tag = 2
         
+        
+        Review.text = "感想を入力してください"
+        Review.delegate = self
+        Review.textColor = UIColor.lightGray
+    
+//        Review.placeHolder = "ここに入力"
+//               Review.placeHolderColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.7)
+        
         sendDB.reiseSendDone = self
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.isNavigationBarHidden = true
+        
+      self.navigationController?.isNavigationBarHidden = false
+        
     }
     
 
@@ -141,12 +157,13 @@ class ToukouViewController: UIViewController,UITextFieldDelegate,UIPickerViewDel
         
         let userData:UserDataModel? = userDefaltsEX.codable(forKey: "profile")
         
-        self.sendDB.sendDB(ReiseName: Reise.text!, price: Money.text!, userName: (userData?.name)!, ReisePrefecture: Todoufuken.text!, review: Review.text!, rate: self.Rate.rating, ReiseImageData: (Toukouimage.image?.jpegData(compressionQuality: 0.01))!, sender: userData!)
+        self.sendDB.sendDB(ReiseName: Reise.text!, price: Money.text!, userName: (userData?.name)!, ReisePrefecture: Todoufuken.text!, review: Review.text!, rate: self.Rate.rating, ReiseImageData: (Toukouimage.image?.jpegData(compressionQuality: 0.01))!, sender: userData!)//FireBaseに飛ばす
         
+        self.navigationController?.popViewController(animated: true)//画面を閉じる
     }
     
     func reiseSendDone() {
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true,completion: nil)
     }
     
     
@@ -192,6 +209,5 @@ class ToukouViewController: UIViewController,UITextFieldDelegate,UIPickerViewDel
         picker.dismiss(animated: true, completion: nil)
         
     }
-
     
 }
