@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+
 struct ProfileModel:Codable {
         
     var imageURLString:String?

@@ -8,6 +8,8 @@
 import UIKit
 import Lottie
 import SnapKit
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController,UIScrollViewDelegate {
 
@@ -16,6 +18,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var ESCButton: UIButton!
     
     
+//    アニメーションの変数と表示される言葉
     var  AnimationArray = ["1","2","3","4","5"]
     var AnimationStringArray = ["あなたの投稿で観光地や地元を盛り上げよう","楽しい、綺麗な夜景や背景をみんなで共有","いいなぁと思った場所にはどんどん行ってみよう","あなたの投稿が輪を広げる","さぁ登録して始めよう！"]
     
@@ -28,6 +31,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         ScrollView.isPagingEnabled = true
         SetScroll()
         
+//        アニメーションされる時の処理
         for i in 0...4{
             
             let animationView = AnimationView()
@@ -43,15 +47,27 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     }
     
    
-
+// ナビゲーションコントローラーバーは非表示処理
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
       
+    
        
         view.addSubview(ESCButton)
-        
+//        登録があればSentakuVC(次の画面へ)
+       
+            
+        if Auth.auth().currentUser?.uid != nil {
+            
+            performSegue(withIdentifier: "SentakuVC", sender: nil)
+            
+        }else{
+            
+            
+            
+        }
 
     }
    

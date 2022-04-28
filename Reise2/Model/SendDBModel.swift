@@ -85,7 +85,7 @@ class SendDBModel {
     
     //    投稿時にFirebaseに送信される処理
     func sendDB(ReiseName:String,price:String,userName:String,ReisePrefecture:String,review:String,rate:Double,ReiseImageData:Data,sender:UserDataModel) {
-        
+//        投稿写真の処理
         let imageRef = Storage.storage().reference().child("ReiseImage").child("\(UUID().uuidString + String(Date().timeIntervalSince1970)).jpeg")
         imageRef.putData(ReiseImageData,metadata: nil) { metadata,error in
             if error != nil {
@@ -102,11 +102,11 @@ class SendDBModel {
                 
                 if url != nil {
                     
-                    
+//                    投稿時にプロフィール写真と名前、IDをsenderに追加する
                     self.myProfile.append(sender.profileImageString!)
                     self.myProfile.append(sender.name!)
                     self.myProfile.append(sender.uid!)
-                    
+//                    FireBaseのコレクションにPostsを作りそこに保管する
                     self.db.collection("Posts").document().setData(["name" : userName as Any,"uid":Auth.auth().currentUser!.uid as Any,"ReiseName":ReiseName,"price":price,"ReisePrefecture":ReisePrefecture,"rate":rate,"review":review,"ReiseImageData":url?.absoluteString as Any,"sender":self.myProfile,"Date":Timestamp()]){
                         
                         error in

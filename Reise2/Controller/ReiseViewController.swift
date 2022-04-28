@@ -13,7 +13,7 @@ import FirebaseAuth
 import Nuke
 
 
-class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GetReise,UINavigationControllerDelegate{
+class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate{
  
     
 //,GetReise {
@@ -24,7 +24,6 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
    var Posts = [ReisedPostModel]()
   let db = Firestore.firestore()
-  var reiseModelArray = [ReiseModel]()
   var loadModel = LoadDBModel()
   var index = Int()
 
@@ -40,7 +39,7 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+        
     }
     
     func ReiseFirebase() {
@@ -132,20 +131,13 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         review.text = self.Posts[indexPath.row].Review
 
         let rate = cell.contentView.viewWithTag(8) as! CosmosView
-        
-        
-        
+
         return cell
         
         
     }
     
-    func getReise(dataArray: [ReiseModel]) {
-        reiseModelArray = []
-        reiseModelArray = dataArray
-        ReiseTableView.reloadData()
-        
-    }
+    
     
     
     
@@ -154,8 +146,8 @@ class ReiseViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         self.dismiss(animated: true,completion: nil)
         
-        self.ReiseTableView.reloadData()
-        Posts = []
+        
+        
         
     }
     

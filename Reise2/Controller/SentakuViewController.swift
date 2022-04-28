@@ -29,17 +29,16 @@ class SentakuViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.isNavigationBarHidden = true
-        
+       
         if Auth.auth().currentUser?.uid != nil {
             
-            let userData = KeyChainConfig.getKeyData(key: "userData")
-            
+           
             
         }else{
+            
             performSegue(withIdentifier: "profileVC", sender: nil)
             
         }
-        
     }
     
     

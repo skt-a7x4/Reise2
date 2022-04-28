@@ -29,7 +29,7 @@ class KensakuViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         prefecturepicker.tag = 1
         doneButton.isEnabled = true
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+       
         
 //        fetchpostDataby(Todofuken: "沖縄県")
         

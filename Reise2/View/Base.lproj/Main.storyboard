@@ -26,7 +26,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="スキップ"/>
                                         <connections>
-                                            <segue destination="uHk-5O-xIK" kind="show" id="rtA-LG-wqm"/>
+                                            <segue destination="uHk-5O-xIK" kind="show" identifier="SentakuVC" id="rtA-LG-wqm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -580,7 +580,7 @@
     </designables>
     <resources>
         <image name="ichiran" width="1920" height="1280"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person" catalog="system" width="32" height="32"/>
         <image name="ryokou" width="1920" height="1280"/>
         <image name="satuei" width="1920" height="1440"/>
         <systemColor name="labelColor">

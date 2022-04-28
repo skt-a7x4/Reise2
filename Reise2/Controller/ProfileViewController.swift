@@ -96,6 +96,8 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
                 return ""
             }
         }
+    
+    
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         
         if nameText.text?.count ?? 0  > 0 && ageText.text?.count ?? 0 > 0 && prefectureText.text?.count ?? 0 > 0 && privateCamera == true {
@@ -122,9 +124,10 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
                 
             }
             
-        
+//
             let userdata = UserDataModel(name: self.nameText.text, age: self.ageText.text, prefecture: self.prefectureText.text, profileImageString: "", uid: Auth.auth().currentUser?.uid, date: Date().timeIntervalSince1970)
           
+//            SendMopdelの
             let sendDBModel = SendDBModel()
             sendDBModel.profileSendDone = self
             sendDBModel.sendProfileData(userData: userdata, profileimageData: (self.ProfileImage.image?.jpegData(compressionQuality: 0.4))!)
@@ -133,7 +136,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
         
     
     }
-    
+//    プロフィールが送信されたことが確認ののち画面を閉じる
     func profileSendDone() {
         dismiss(animated: true, completion: nil)
     }
@@ -146,7 +149,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIPickerViewDe
     }
     
     
-    
+//    プロフィール写真選択時のコード
     func openCamera(){
         let sourceType:UIImagePickerController.SourceType = .photoLibrary
         // カメラが利用可能かチェック

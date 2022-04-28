@@ -24,7 +24,7 @@ struct ReiseModel {
     let rate:Double?
     
 }
-
+//　投稿時に反映させるモデル
 struct ReisedPostModel {
     var ReiseName:String
     var uid:String
